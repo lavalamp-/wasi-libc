@@ -462,11 +462,11 @@ $(MUSL_PRINTSCAN_NO_FLOATING_POINT_OBJS): CFLAGS += \
 
 # TODO: apply -mbulk-memory globally, once
 # https://github.com/llvm/llvm-project/issues/52618 is resolved
-$(BULK_MEMORY_OBJS): CFLAGS += \
-        -mbulk-memory
-
-$(BULK_MEMORY_OBJS): CFLAGS += \
-        -DBULK_MEMORY_THRESHOLD=$(BULK_MEMORY_THRESHOLD)
+# $(BULK_MEMORY_OBJS): CFLAGS += \
+#         -mbulk-memory
+#
+# $(BULK_MEMORY_OBJS): CFLAGS += \
+#         -DBULK_MEMORY_THRESHOLD=$(BULK_MEMORY_THRESHOLD)
 
 $(LIBWASI_EMULATED_SIGNAL_MUSL_OBJS): CFLAGS += \
 	    -D_WASI_EMULATED_SIGNAL
